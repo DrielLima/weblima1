@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diagrama de Classes UML</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="class-box" id="admin">
+            <h3>Administrador</h3>
+            <p><b>Atributos:</b></p>
+            <ul>
+                <li>id: int</li>
+                <li>nome: str</li>
+                <li>email: str</li>
+                <li>senha: str</li>
+            </ul>
+            <p><b>Métodos:</b></p>
+            <ul>
+                <li>gerenciarFuncionarios()</li>
+                <li>atualizarCardapio()</li>
+                <li>controlarEstoque()</li>
+                <li>emitirRelatorioVendas()</li>
+            </ul>
+        </div>
+
+        <div class="class-box" id="cliente">
+            <h3>Cliente</h3>
+            <p><b>Atributos:</b></p>
+            <ul>
+                <li>id: int</li>
+                <li>nome: str</li>
+                <li>telefone: str</li>
+                <li>endereco: str</li>
+                <li>email: str</li>
+                <li>senha: str</li>
+            </ul>
+            <p><b>Métodos:</b></p>
+            <ul>
+                <li>cadastrarCliente()</li>
+                <li>fazerLogin()</li>
+                <li>criarPedido()</li>
+                <li>consultarCardapio()</li>
+            </ul>
+        </div>
+
+        <div class="class-box" id="cardapio">
+            <h3>Cardápio</h3>
+            <p><b>Atributos:</b></p>
+            <ul>
+                <li>id: int</li>
+                <li>nome: str</li>
+                <li>preco: float</li>
+                <li>descricao: str</li>
+            </ul>
+            <p><b>Métodos:</b></p>
+            <ul>
+                <li>editarItem()</li>
+                <li>excluirItem()</li>
+                <li>adicionarPromocao()</li>
+            </ul>
+        </div>
+
+        <div class="class-box" id="pedido">
+            <h3>Pedido</h3>
+            <p><b>Atributos:</b></p>
+            <ul>
+                <li>id: int</li>
+                <li>clienteId: int</li>
+                <li>itens: list</li>
+                <li>total: float</li>
+                <li>status: str</li>
+            </ul>
+            <p><b>Métodos:</b></p>
+            <ul>
+                <li>adicionarItem()</li>
+                <li>alterarItem()</li>
+                <li>calcularTotal()</li>
+                <li>acompanharStatus()</li>
+            </ul>
+        </div>
+    </div>
+
+    <canvas id="canvas"></canvas>
+    <script src="script.js"></script>
+</body>
+</html>
